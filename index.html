@@ -7,19 +7,35 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="row row-cols-2 row-cols-md-3 g-4 mt-1 mb-4">
+        <div class="row row-cols-3 row-cols-md-4 g-2 mt-1 mb-4 card_1">
             <div class="col">
                 <div class="card h-100">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">
+                        <span id="num_card">0</span>
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
                     <img src="./image/1502140004.svg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-center">Card title <span class="text-danger"><b>$ 3.45</b></span></h5>
                         <p class="card-text text-center">
-                            <button class="btn btn-warning ">Add to card</button>
+                            <span id="add_to_card">
+                                <button class="btn btn-warning text-white" onclick="add_to_card()"><b>ADD</b></button>
+                            </span>
+                            <span id="sum_dash" class="d-none">
+                                <span>
+                                    <button class="btn btn-danger" type="submit" onclick="dash_card()"><i class="bi bi-dash-lg"></i></button>
+                                </span>
+                                <span>
+                                    <button class="btn btn-primary" type="submit" onclick="sum_card()"><i class="bi bi-plus-lg"></i></button>
+                                </span>
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -30,7 +46,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Card title <span class="text-danger"><b>$ 3.45</b></span></h5>
                         <p class="card-text text-center">
-                            <button class="btn btn-warning ">Add to card</button>
+                            <button class="btn btn-warning text-white"><b>ADD</b></button>
                         </p>
                     </div>
                 </div>
@@ -41,7 +57,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Card title <span class="text-danger"><b>$ 3.45</b></span></h5>
                         <p class="card-text text-center">
-                            <button class="btn btn-warning ">Add to card</button>
+                            <button class="btn btn-warning text-white"><b>ADD</b></button>
                         </p>
                     </div>
                 </div>
@@ -52,7 +68,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Card title <span class="text-danger"><b>$ 3.45</b></span></h5>
                         <p class="card-text text-center">
-                            <button class="btn btn-warning ">Add to card</button>
+                            <button class="btn btn-warning text-white"><b>ADD</b></button>
                         </p>
                     </div>
                 </div>
@@ -63,7 +79,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Card title <span class="text-danger"><b>$ 3.45</b></span></h5>
                         <p class="card-text text-center">
-                            <button class="btn btn-warning ">Add to card</button>
+                            <button class="btn btn-warning text-white"><b>ADD</b></button>
                         </p>
                     </div>
                 </div>
@@ -74,7 +90,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Card title <span class="text-danger"><b>$ 3.45</b></span></h5>
                         <p class="card-text text-center">
-                            <button class="btn btn-warning ">Add to card</button>
+                            <button class="btn btn-warning text-white"><b>ADD</b></button>
                         </p>
                     </div>
                 </div>
@@ -85,7 +101,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Card title <span class="text-danger"><b>$ 3.45</b></span></h5>
                         <p class="card-text text-center">
-                            <button class="btn btn-warning ">Add to card</button>
+                            <button class="btn btn-warning text-white"><b>ADD</b></button>
                         </p>
                     </div>
                 </div>
@@ -96,7 +112,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Card title <span class="text-danger"><b>$ 3.45</b></span></h5>
                         <p class="card-text text-center">
-                            <button class="btn btn-warning ">Add to card</button>
+                            <button class="btn btn-warning text-white"><b>ADD</b></button>
                         </p>
                     </div>
                 </div>
@@ -107,7 +123,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Card title <span class="text-danger"><b>$ 3.45</b></span></h5>
                         <p class="card-text text-center">
-                            <button class="btn btn-warning ">Add to card</button>
+                            <button class="btn btn-warning text-white"><b>ADD</b></button>
                         </p>
                     </div>
                 </div>
@@ -118,7 +134,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Card title <span class="text-danger"><b>$ 3.45</b></span></h5>
                         <p class="card-text text-center">
-                            <button class="btn btn-warning ">Add to card</button>
+                            <button class="btn btn-warning text-white"><b>ADD</b></button>
                         </p>
                     </div>
                 </div>
@@ -129,7 +145,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Card title <span class="text-danger"><b>$ 3.45</b></span></h5>
                         <p class="card-text text-center">
-                            <button class="btn btn-warning ">Add to card</button>
+                            <button class="btn btn-warning text-white"><b>ADD</b></button>
                         </p>
                     </div>
                 </div>
@@ -140,7 +156,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Card title <span class="text-danger"><b>$ 3.45</b></span></h5>
                         <p class="card-text text-center">
-                            <button class="btn btn-warning ">Add to card</button>
+                            <button class="btn btn-warning text-white"><b>ADD</b></button>
                         </p>
                     </div>
                 </div>
@@ -151,7 +167,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Card title <span class="text-danger"><b>$ 3.45</b></span></h5>
                         <p class="card-text text-center">
-                            <button class="btn btn-warning ">Add to card</button>
+                            <button class="btn btn-warning text-white"><b>ADD</b></button>
                         </p>
                     </div>
                 </div>
@@ -162,7 +178,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Card title <span class="text-danger"><b>$ 3.45</b></span></h5>
                         <p class="card-text text-center">
-                            <button class="btn btn-warning ">Add to card</button>
+                            <button class="btn btn-warning text-white"><b>ADD</b></button>
                         </p>
                     </div>
                 </div>
